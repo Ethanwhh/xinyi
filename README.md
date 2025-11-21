@@ -226,94 +226,59 @@ SQLite 数据库（本地存储）
 #### 1. 克隆项目
 
 ```bash
-git clone https://github.com/yourusername/xinyi.git
+git clone https://github.com/Ethanwhh/xinyi.git
 cd xinyi
 ```
 
-#### 2. 后端设置
+#### 2. Ollama 设置
+
+使用本地 AI 模型：安装 Ollama
+
+下载安装包: https://ollama.com/download  
+
+进入ollama官网主页，选择对应的操作系统下载安装即可。
 
 ```bash
-# 进入后端目录
-cd backend
-
-# 创建虚拟环境 (推荐使用 uv)
-pip install uv
-uv venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# 安装依赖
-uv pip install -r requirements.txt
-
-# 初始化数据库
-python -m app.database
-
-# 启动后端服务
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-```
-
-后端服务将在 `http://127.0.0.1:8000` 启动
-
-#### 3. 前端设置
-
-```bash
-# 打开新终端，进入前端目录
-cd frontend
-
-# 安装依赖
-npm install
-# 或使用 pnpm/yarn
-pnpm install
-
-# 启动开发服务器
-npm run dev
-```
-
-前端服务将在 `http://localhost:3000` 启动
-
-#### 4. Ollama 设置
-
-如果使用本地 AI 模型：
-
-```bash
-# 安装 Ollama
-# macOS/Linux
-curl -fsSL https://ollama.com/install.sh | sh
-
-# Windows
-# 下载安装包: https://ollama.com/download
-
 # 拉取推荐模型
-ollama pull qwen2.5:7b
-ollama pull llama3.1:8b
+ollama pull Ethanwhh/Qwen3-4B-xinyi
 
 # 启动 Ollama 服务
 ollama serve
 ```
 
-### 配置文件
+#### 3. 魔搭环境设置
 
-#### 后端配置 (`backend/.env`)
+复制.env.example 文件新建为.env文件并填入自己的api_key
 
-```env
-# 数据库
-DATABASE_URL=sqlite:///./data/xinyi.db
+在your_api_key_here填入你的api_key,在个人主页的访问令牌可以找到。
 
-# JWT 密钥（请修改为随机字符串）
-SECRET_KEY=your-secret-key-change-this-in-production
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=1440
+#### 4. 启动后端
 
-# AI 模型配置
-# Ollama (本地)
-OLLAMA_BASE_URL=http://localhost:11434
-OLLAMA_MODEL=qwen2.5:7b
+```bash
+# 进入后端目录
+cd backend
+
+# 安装 UV 包管理器（如果没有）
+pip install uv
+
+# 安装所有依赖（首次需要2-3分钟）
+uv sync
+
+# 启动后端服务
+uv run main.py
 ```
 
-#### 前端配置 (`frontend/.env.local`)
+#### 3. 启动前端
 
-```env
-# API 基础路径
-NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
+```bash
+# 进入前端目录
+cd xinyi/frontend
+
+# 安装依赖（首次需要3-5分钟）
+npm install
+
+# 启动前端服务
+npm run dev
 ```
 
 ### 用户流程
