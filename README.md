@@ -250,7 +250,7 @@ ollama serve
 
 复制.env.example 文件新建为.env文件并填入自己的api_key
 
-在your_api_key_here填入你的api_key,在个人主页的访问令牌可以找到。
+在your_api_key_here填入你的api_key,在魔搭平台首页中的访问令牌可以找到。
 
 #### 4. 启动后端
 
@@ -277,8 +277,13 @@ cd xinyi/frontend
 # 安装依赖（首次需要3-5分钟）
 npm install
 
-# 启动前端服务
+# 启动前端服务，dev模式下可以进行开发和修改，并能够实时查看更新
 npm run dev
+
+# 如果修改完成可以进入生产模式，性能更快，文件更小
+Ctrl+C          # 停止开发服务器
+npm run build   # 构建（3-5分钟，只需一次）
+npm start       # 启动生产服务器
 ```
 
 ### 用户流程
