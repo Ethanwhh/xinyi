@@ -360,6 +360,36 @@ npm start       # 启动生产服务器
 
 ## 📖 技术文档
 
+### [心翼大模型(Qwen3-4B-xinyi)](https://www.modelscope.cn/models/Ethanwhh/Qwen3-4B-xinyi/summary)
+
+**智能对话** 模块的本地ollama大模型使用的是 **Qwen3-4B-xinyi** 。
+
+#### 模型数据
+
+本模型的基模型采用的是 **通义千问3-4B-Instruct-2507** ，具体详情可见：https://www.modelscope.cn/models/Qwen/Qwen3-4B-Instruct-2507/summary 。
+
+数据集构造参考 **SoulChat2.0** 的数据构造方式，具体可见：https://github.com/scutcyr/SoulChat2.0 。
+
+#### 模型使用
+
+模型下载方式可以参考：https://modelscope.cn/docs/models/download 。
+
+心翼项目主要是为了隐私化和本地部署，该模型已经上传 **ollama** ，大家也可以通过 **ollama** 本地部署使用，模型地址：https://ollama.com/Ethanwhh/Qwen3-4B-xinyi 。
+
+#### 限制声明
+
+- 本项目开源的模型基于开源基座模型微调得到，使用模型权重时，请遵循对应基座模型的模型协议：[Qwen](https://github.com/QwenLM/Qwen/blob/main/Tongyi%20Qianwen%20LICENSE%20AGREEMENT) 
+- **心翼** 是一个心理健康辅助工具，旨在帮助用户更好地理解和管理自己的情绪状态。但请注意：
+- ⚠️ 本平台 **不能** 替代专业的心理咨询和治疗
+- ⚠️ 如果您正在经历严重的心理健康问题，请及时寻求专业帮助
+- ⚠️ 评估结果仅供参考，不作为诊断依据
+- ⚠️ AI 生成的建议仅供参考，不构成医疗建议
+
+#### 致谢
+
+本项目基于[Qwen3-4B-Instruct-2507](https://www.modelscope.cn/models/Qwen/Qwen3-4B-Instruct-2507/summary)基座模型，通过[SoulChat2.0](https://github.com/scutcyr/SoulChat2.0)相关数据集基于[LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)框架lora微调得到，感谢开源和作者的付出。
+
+
 ### 💬 智能对话模块技术文档
 
 智能对话模块是心翼项目的核心功能，提供**24小时在线心理陪伴服务**。通过多智能体协作和动态模型路由，实现：
