@@ -1,4 +1,8 @@
-# 💕 心翼 (XinYi) - AI 心理健康助手平台
+<div align="center">
+
+<h1>💕 心翼 (XinYi) - AI 心理健康助手平台</h1>
+
+</div>
 
 <div align="center">
 
