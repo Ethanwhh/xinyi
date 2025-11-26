@@ -749,4 +749,6 @@ npm start       # 启动生产服务器
 
 **💕 心翼 · 关注心理健康，拥抱美好生活**
 
+[![Star History Chart](https://api.star-history.com/svg?repos=Ethanwhh/xinyi&type=Date)](https://star-history.com/Ethanwhh/xinyi&Date)
+
 </div>
