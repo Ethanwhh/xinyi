@@ -6,7 +6,7 @@
 
 <div align="center">
 
-![心翼 Logo](https://img.shields.io/badge/心翼-AI心理健康平台-blue?style=for-the-badge)
+[![心翼 Logo](https://img.shields.io/badge/心翼-AI心理健康平台-blue?style=for-the-badge)](https://github.com/Ethanwhh/xinyi)
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
